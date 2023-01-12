@@ -1,6 +1,6 @@
 export const SITE = {
-  title: 'Website',
-  description: 'Your website description.',
+  title: 'OneSum',
+  description: 'OneSum web services.',
   defaultLanguage: 'en_GB',
   navItems: [
     {
@@ -20,8 +20,7 @@ export const SITE = {
 
 export const OPEN_GRAPH = {
   image: {
-    src: 'https://example.com/link/to/img.jpg',
-    alt:'An empty image',
+    src: 'https://onesum.uk/img/assets/social-cover-default.png',
+    alt:'OneSum: Bespoke websites',
   },
-  twitter: 'username',
 };
