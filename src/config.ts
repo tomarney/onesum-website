@@ -7,13 +7,13 @@ export const SITE = {
       "displayText": "About Us",
       "url": "/about-us",
       "hoverText": "",
-      "hide": false
+      "hide": true
     },
     {
       "displayText": "Contact Us",
       "url": "/contact-us",
       "hoverText": "",
-      "hide": false
+      "hide": true
     }
   ]
 };
