@@ -5,10 +5,10 @@ import QuoteCard from "../components/QuoteCard.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<MainLayout>
+<MainLayout hero={true}>
   <div slot="hero" class="container mx-auto py-20 text-white">
     <div class="max-w-screen-xl mx-auto">
-      <div class="max-w-prose text-center">
+      <div class="max-w-prose text-center mx-auto">
         <h1 class="text-5xl font-light">Love it and leave it</h1>
         <h2 class="text-3xl font-light pt-12">
           Beautiful custom websites with zero ongoing costs or maintenance.
@@ -19,62 +19,81 @@ import MainLayout from "../layouts/MainLayout.astro";
     </div>
   </div>
 
-  <Container classes="grid gap-20 lg:grid-flow-col lg:gap-10 text-center">
-    <div>
-      <p class="text-2xl">Stunning</p>
-      <p>Any design you can think up, unrestricted by templates</p>
-    </div>
-    <div>
-      <p class="text-2xl">Simple</p>
-      <p>
-        All the complexity happens before we publish. The result is fast, light,
-        and modern.
-      </p>
-    </div>
-    <div>
-      <p class="text-2xl">Stable</p>
-      <p>
-        The simplicity guarantees stability. Super resilient, secure, and
-        virtually no maintenance.
-      </p>
+  <Container classes="text-center py-32">
+    <div class="max-w-xs md:max-w-none mx-auto">
+      <div class="grid gap-16 md:grid-flow-col md:auto-cols-fr md:gap-6 lg:gap-10">
+        <div class="text-blue-900 p-10 rounded-3xl shadow-md">
+          <p class="text-4xl font-light">Stunning</p>
+          <p class="mt-6">Any design you can think up, unrestricted by templates</p>
+        </div>
+        <div class="text-blue-900 p-10 rounded-3xl shadow-md">
+          <p class="text-4xl font-light">Simple</p>
+          <p class="mt-6">
+            All the complexity happens before we publish. The result is fast, light,
+            and modern.
+          </p>
+        </div>
+        <div class="text-blue-900 p-10 rounded-3xl shadow-md">
+          <p class="text-4xl font-light">Stable</p>
+          <p class="mt-6">
+            The simplicity guarantees stability. Super resilient, secure, and
+            virtually no maintenance.
+          </p>
+        </div>
+      </div>
     </div>
   </Container>
 
-  <Container background="bg-gradient-to-tr from-blue-900 to-indigo-500" classes="py-20">
-    <div class="w-max max-w-prose mx-auto bg-white shadow-xl rounded-lg p-10">
-      <h2 class="text-3xl">Features</h2>
-      <ul class="mt-8 list-item text-lg">
-        <li>✔&nbsp;&nbsp;Hand-coded build</li>
-        <li>✔&nbsp;&nbsp;as many pages as you need</li>
-        <li>✔&nbsp;&nbsp;responsive design (works on mobiles and desktops)</li>
-        <li>✔&nbsp;&nbsp;Hosting configured</li>
-        <li>✔&nbsp;&nbsp;domain configured</li>
-        <li>✔&nbsp;&nbsp;secured (SSL certificate for HTTPS)</li>
+  <Container background="bg-slate-900 rounded-tl-[33vw] rounded-br-[16vw]" classes="pt-32 pb-40">
+    <div class="px-[8vw] py-4">
+      <h2 class="text-6xl font-light text-white">Features</h2>
+      <ul class="mt-16 text-lg grid sm:grid-cols-2 sm:auto-rows-fr gap-6 text-indigo-100">
+        {[
+        "Hand-coded build",
+        "as many pages as you need",
+        "responsive design (works on mobiles and desktops)",
+        "Hosting configured",
+        "domain configured",
+        "secured (SSL certificate for HTTPS)"].map((l)=> 
+          <li class="bg-purple-700/25 rounded-full shadow-md grid items-center p-4">
+            {l}
+          </li>
+          )}
       </ul>
     </div>
   </Container>
 
-  <Container classes="grid gap-20 lg:grid-cols-2 lg:gap-12">
-    <QuoteCard 
-    text="From beginning to very pretty end – we were delighted the website Tom built for us. He made the whole process so easy. A super talented guy!"
-    name="Irene Jeffrey"
-    photoUrl="http://via.placeholder.com/400x400"
-    affiliation="Director of Marketing Mums"
-    />
-    <QuoteCard 
-    text="Amazing from start to finish, everything was built expertly without us having to get involved with the technical side ourselves. The end result is perfect, never a glitch and the whole process was completely trouble-free."
-    name="Sam Jones"
-    photoUrl="http://via.placeholder.com/400x400"
-    affiliation="Co-founder of Middle Child Brewing"
-    />
+  <div class="bg-slate-900">
+    <div class="bg-white rounded-tl-[33vw]">
+      <div class="container relative max-w-screen-lg mx-auto px-4 xs:px-10 pb-32">
+        <div class="grid gap-20 lg:grid-cols-2 lg:gap-12">
+          <QuoteCard classes="relative -mt-10"
+          text="From beginning to very pretty end – we were delighted the website Tom built for us. He made the whole process so easy. A super talented guy!"
+          name="Irene Jeffrey"
+          photoUrl="http://via.placeholder.com/400x400"
+          affiliation="Director of Marketing Mums"
+          />
+          <QuoteCard classes="relative -mt-10"
+          text="Amazing from start to finish, everything was built expertly without us having to get involved with the technical side ourselves. The end result is perfect, never a glitch and the whole process was completely trouble-free."
+          name="Sam Jones"
+          photoUrl="http://via.placeholder.com/400x400"
+          affiliation="Co-founder of Middle Child Brewing"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <Container classes="bg-slate-900 text-white lg:rounded-3xl">
+    <div class="py-10 bg-gradient-to-r from-slate-900 via-purple-900/30">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-20 w-fit mx-auto ">
+        <p class="text-xl w-fit">See the websites they're talking about</p> <CtaButton/>
+      </div>
+    </div>
    </Container>
 
-   <Container background="bg-gradient-to-r from-slate-900 to-purple-900" classes="py-20">
-    <CtaButton/>
-   </Container>
-
-   <Container background="bg-indigo-900 bg-opacity-25" classes="py-20">
-    <h2 class="text-4xl text-blue-900 ">Pay for what matters</h2>
+   <Container classes="mt-20 py-20">
+    <h2 class="text-4xl text-blue-900">Pay for what matters</h2>
     <p class="mt-8">
       We've perfected a system that means you only have to pay for the real work: the design and build.
     </p>

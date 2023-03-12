@@ -5,7 +5,12 @@ import { SITE } from '../siteData';
 import Footer from '../components/Footer.astro';
 import Nav from '../components/Nav.astro';
 
-const { frontmatter = {} } = Astro.props;
+export interface Props {
+	frontmatter?: any;
+	hero?: boolean;
+}
+
+const { frontmatter = {}, hero = false } = Astro.props;
 ---
 
 <html dir="ltr" lang="en-gb">
@@ -18,7 +23,7 @@ const { frontmatter = {} } = Astro.props;
   </head>
 
   <body>
-    <div class="bg-gradient-to-tr to-purple-700 from-indigo-900">
+    <div class={`bg-gradient-to-tr to-purple-700 from-indigo-900 ${hero && 'rounded-bl-[50vw] lg:rounded-bl-[33vw]'}`}>
       <Nav />
       <slot name="hero"/> {/* use <div slot="hero">hero contents</div>*/}
     </div>
