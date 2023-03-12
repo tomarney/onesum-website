@@ -1,3 +1,7 @@
+export const CONTACT_DETAILS = {
+	email: 'hello@onesum.uk'
+}
+
 export const SITE = {
   title: 'OneSum',
   description: 'OneSum web services.',
@@ -21,6 +25,6 @@ export const SITE = {
 export const OPEN_GRAPH = {
   image: {
     src: 'https://onesum.uk/img/assets/social-cover-default.png',
-    alt:'OneSum: Bespoke websites',
+    alt:'OneSum: Bespoke websites',
   },
 };

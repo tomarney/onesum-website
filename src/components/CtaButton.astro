@@ -1,0 +1,13 @@
+---
+export interface Props {
+	text?: string;
+	href?: string;
+	classes?: string;
+}
+import { CONTACT_DETAILS } from "../siteData";
+const { text = "Show me →", href = "mailto:" + CONTACT_DETAILS.email, classes = ""} = Astro.props;
+---
+
+<a href={href} class={"inline-block tracking-wide w-60 py-4 rounded-md bg-fuchsia-600 hover:bg-fuchsia-700 transition-colors " + classes}>
+		{ text }
+</a>

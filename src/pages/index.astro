@@ -1,20 +1,22 @@
 ---
+import CtaButton from "../components/CtaButton.astro";
 import MainLayout from "../layouts/MainLayout.astro";
-
 ---
 
 <MainLayout>
 
   <div slot="hero" class="container mx-auto py-20 text-white">
     <div class="max-w-screen-xl mx-auto">
-      <div class="max-w-prose">
-        <h1 class="text-4xl">Beautiful custom websites with zero ongoing costs or maintenance.</h1>
-        <p class="text-4xl pt-6">No worries.</p>
+      <div class="max-w-prose text-center">
+        <h1 class="text-5xl font-light">Love it and leave it</h1>
+        <h2 class="text-3xl font-light pt-12">Beautiful custom websites with zero ongoing costs or maintenance.</h2>
+        <p class="text-3xl font-light pt-6">No worries.</p>
+        <CtaButton classes="mt-16"/>
       </div>
     </div>
   </div>
 
-  <div class="w-full h-screen grid items-center justify-items-center">
+  <div class="w-full h-full grid items-center justify-items-center">
     <p>Welcome!</p>
   </div>
 
