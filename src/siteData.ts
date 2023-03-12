@@ -8,14 +8,14 @@ export const SITE = {
   defaultLanguage: 'en_GB',
   navItems: [
     {
-      "displayText": "About Us",
-      "url": "/about-us",
+      "displayText": "Examples",
+      "url": "/examples",
       "hoverText": "",
       "hide": false
     },
     {
       "displayText": "Contact Us",
-      "url": "/contact-us",
+      "url": `mailto:${CONTACT_DETAILS.email}`,
       "hoverText": "",
       "hide": false
     }

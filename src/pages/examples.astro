@@ -1,0 +1,30 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Container from "../components/Container.astro";
+---
+
+<MainLayout>
+  <Container classes="mt-32">
+    <h1 class="text-6xl font-light text-indigo-900">Examples</h1>
+    <p class="mt-10">These two are the projects we're most proud of.</p>
+  </Container>
+
+  <Container classes="mt-32">
+    <h2 class="text-4xl text-indigo-900">Marketing Mums</h2>
+    <p class="mt-10">
+      A complete redesign and rebuild of the <a
+        href="https://marketingmums.co.uk">marketingmums.co.uk</a
+      > website.
+    </p>
+    <iframe src="https://marketingmums.co.uk" class="w-full aspect-[4/3] mt-10 shadow-2xl border border-slate-300"></iframe>
+  </Container>
+
+  <Container classes="mt-32">
+    <h2 class="text-4xl text-indigo-900">Middle Child Brewing</h2>
+    <p class="mt-10">
+      A completely new website, designed and built from the ground up in time
+      for the company's launch event.
+    </p>
+    <iframe src="https://middlechildbrewing.com" class="w-full aspect-[4/3] mt-10 shadow-2xl border border-slate-300"></iframe>
+  </Container>
+</MainLayout>

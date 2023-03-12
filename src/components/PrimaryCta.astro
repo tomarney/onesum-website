@@ -5,7 +5,7 @@ export interface Props {
 	classes?: string;
 }
 import { CONTACT_DETAILS } from "../siteData";
-const { text = "Show me →", href = "mailto:" + CONTACT_DETAILS.email, classes = ""} = Astro.props;
+const { text = "Get in touch", href = "mailto:" + CONTACT_DETAILS.email, classes = ""} = Astro.props;
 ---
 
 <a href={href} class={"inline-block tracking-wide w-60 py-4 rounded-md text-center text-white text-lg bg-fuchsia-600 hover:bg-fuchsia-700 transition-colors " + classes}>

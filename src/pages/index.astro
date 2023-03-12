@@ -1,8 +1,9 @@
 ---
 import Container from "../components/Container.astro";
-import CtaButton from "../components/CtaButton.astro";
+import SecondaryCta from "../components/SecondaryCta.astro";
 import QuoteCard from "../components/QuoteCard.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import PrimaryCta from "../components/PrimaryCta.astro";
 ---
 
 <MainLayout hero={true}>
@@ -14,7 +15,10 @@ import MainLayout from "../layouts/MainLayout.astro";
           Beautiful custom websites with zero ongoing costs or maintenance.
         </h2>
         <p class="text-3xl font-light pt-6">No worries.</p>
-        <CtaButton classes="mt-16 shadow-lg" />
+        <div class="flex flex-col lg:flex-row gap-6 mt-16 justify-center place-items-center">
+          <PrimaryCta classes="shadow-lg"/>
+          <SecondaryCta classes="shadow-lg" />
+        </div>
       </div>
     </div>
   </div>
@@ -87,7 +91,7 @@ import MainLayout from "../layouts/MainLayout.astro";
    <Container classes="bg-slate-900 text-white lg:rounded-3xl">
     <div class="py-10 bg-gradient-to-r from-slate-900 via-purple-900/30">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-20 w-fit mx-auto ">
-        <p class="text-xl w-fit">See the websites they're talking about</p> <CtaButton/>
+        <p class="text-xl w-fit">See the websites they're talking about</p> <SecondaryCta/>
       </div>
     </div>
    </Container>
