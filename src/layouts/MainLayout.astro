@@ -23,7 +23,7 @@ const { frontmatter = {}, hero = false } = Astro.props;
   </head>
 
   <body>
-    <div class={`bg-gradient-to-tr from-indigo-700 ${hero ? 'to-purple-700 rounded-bl-[50vw] lg:rounded-bl-[33vw]' : 'to-blue-900'}`}>
+    <div class={`bg-gradient-to-tr from-indigo-700 ${hero ? 'to-purple-700 xs:rounded-bl-[50vw] lg:rounded-bl-[33vw]' : 'to-blue-900'}`}>
       <Nav />
       <slot name="hero"/> {/* use <div slot="hero">hero contents</div>*/}
     </div>

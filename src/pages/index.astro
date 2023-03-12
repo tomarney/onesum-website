@@ -10,11 +10,11 @@ import PrimaryCta from "../components/PrimaryCta.astro";
   <div slot="hero" class="container mx-auto py-20 text-white">
     <div class="max-w-screen-xl mx-auto">
       <div class="max-w-prose text-center mx-auto">
-        <h1 class="text-5xl font-light">Love it and leave it</h1>
-        <h2 class="text-3xl font-light pt-12">
+        <h1 class="text-4xl xs:text-5xl font-light">Love it and leave it</h1>
+        <h2 class="text-2xl sm:text-3xl font-light pt-12">
           Beautiful custom websites with zero ongoing costs or maintenance.
         </h2>
-        <p class="text-3xl font-light pt-6">No worries.</p>
+        <p class="text-2xl xs:text-3xl font-light pt-6">No worries.</p>
         <div class="flex flex-col lg:flex-row gap-6 mt-16 justify-center place-items-center">
           <PrimaryCta classes="shadow-lg"/>
           <SecondaryCta classes="shadow-lg" />
@@ -48,10 +48,10 @@ import PrimaryCta from "../components/PrimaryCta.astro";
     </div>
   </Container>
 
-  <Container background="bg-slate-900 rounded-tl-[33vw] rounded-br-[16vw]" classes="pt-32 pb-40">
+  <Container background="bg-slate-900 xs:rounded-tl-[33vw] rounded-br-[16vw]" classes="pt-32 pb-40">
     <div class="px-[8vw] py-4">
       <h2 class="text-6xl font-light text-white">Features</h2>
-      <ul class="mt-16 text-lg grid sm:grid-cols-2 sm:auto-rows-fr gap-6 text-indigo-100">
+      <ul class="mt-16 text-lg grid sm:grid-cols-2 sm:auto-rows-fr gap-6 text-white text-center">
         {[
         "Hand-coded build",
         "as many pages as you need",
@@ -90,8 +90,9 @@ import PrimaryCta from "../components/PrimaryCta.astro";
 
    <Container classes="bg-slate-900 text-white lg:rounded-3xl">
     <div class="py-10 bg-gradient-to-r from-slate-900 via-purple-900/30">
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-20 w-fit mx-auto ">
-        <p class="text-xl w-fit">See the websites they're talking about</p> <SecondaryCta/>
+      <div class="flex flex-col xs:flex-row items-center justify-between gap-10 sm:gap-20 w-fit mx-auto ">
+        <p class="text-xl text-center w-fit"><span class="inline-block">See the websites</span> <span class="inline-block">they're talking about</span></p>
+        <SecondaryCta/>
       </div>
     </div>
    </Container>
