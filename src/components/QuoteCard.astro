@@ -1,0 +1,25 @@
+---
+export interface Props {
+	text: string;
+	name: string;
+	photoUrl: string;
+	affiliation: string;
+	classes?: string;
+}
+const { text , name, photoUrl, affiliation, classes = ""} = Astro.props;
+---
+
+<figure class={`text-xl max-w-lg rounded-lg shadow-xl bg-white border p-6 mx-auto grid grid-cols-1 content-between ${classes}`}>
+	<blockquote>
+		<p class="font-medium text-indigo-900">
+			{`"${ text }"`}
+		</p>
+	</blockquote>
+	<figcaption class="flex items-center mt-6 space-x-3">
+		<img class="w-16 h-16 aspect-square rounded-full" src={photoUrl} alt={`Photo of ${name}`}/>
+			<cite class="text-lg not-italic">
+				{name}, 
+				<br>{affiliation}
+		</cite>
+	</figcaption>
+</figure>

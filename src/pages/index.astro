@@ -1,23 +1,93 @@
 ---
+import Container from "../components/Container.astro";
 import CtaButton from "../components/CtaButton.astro";
+import QuoteCard from "../components/QuoteCard.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout>
-
   <div slot="hero" class="container mx-auto py-20 text-white">
     <div class="max-w-screen-xl mx-auto">
       <div class="max-w-prose text-center">
         <h1 class="text-5xl font-light">Love it and leave it</h1>
-        <h2 class="text-3xl font-light pt-12">Beautiful custom websites with zero ongoing costs or maintenance.</h2>
+        <h2 class="text-3xl font-light pt-12">
+          Beautiful custom websites with zero ongoing costs or maintenance.
+        </h2>
         <p class="text-3xl font-light pt-6">No worries.</p>
-        <CtaButton classes="mt-16"/>
+        <CtaButton classes="mt-16 shadow-lg" />
       </div>
     </div>
   </div>
 
-  <div class="w-full h-full grid items-center justify-items-center">
-    <p>Welcome!</p>
-  </div>
+  <Container classes="grid gap-20 lg:grid-flow-col lg:gap-10 text-center">
+    <div>
+      <p class="text-2xl">Stunning</p>
+      <p>Any design you can think up, unrestricted by templates</p>
+    </div>
+    <div>
+      <p class="text-2xl">Simple</p>
+      <p>
+        All the complexity happens before we publish. The result is fast, light,
+        and modern.
+      </p>
+    </div>
+    <div>
+      <p class="text-2xl">Stable</p>
+      <p>
+        The simplicity guarantees stability. Super resilient, secure, and
+        virtually no maintenance.
+      </p>
+    </div>
+  </Container>
+
+  <Container background="bg-gradient-to-tr from-blue-900 to-indigo-500" classes="py-20">
+    <div class="w-max max-w-prose mx-auto bg-white shadow-xl rounded-lg p-10">
+      <h2 class="text-3xl">Features</h2>
+      <ul class="mt-8 list-item text-lg">
+        <li>✔&nbsp;&nbsp;Hand-coded build</li>
+        <li>✔&nbsp;&nbsp;as many pages as you need</li>
+        <li>✔&nbsp;&nbsp;responsive design (works on mobiles and desktops)</li>
+        <li>✔&nbsp;&nbsp;Hosting configured</li>
+        <li>✔&nbsp;&nbsp;domain configured</li>
+        <li>✔&nbsp;&nbsp;secured (SSL certificate for HTTPS)</li>
+      </ul>
+    </div>
+  </Container>
+
+  <Container classes="grid gap-20 lg:grid-cols-2 lg:gap-12">
+    <QuoteCard 
+    text="From beginning to very pretty end – we were delighted the website Tom built for us. He made the whole process so easy. A super talented guy!"
+    name="Irene Jeffrey"
+    photoUrl="http://via.placeholder.com/400x400"
+    affiliation="Director of Marketing Mums"
+    />
+    <QuoteCard 
+    text="Amazing from start to finish, everything was built expertly without us having to get involved with the technical side ourselves. The end result is perfect, never a glitch and the whole process was completely trouble-free."
+    name="Sam Jones"
+    photoUrl="http://via.placeholder.com/400x400"
+    affiliation="Co-founder of Middle Child Brewing"
+    />
+   </Container>
+
+   <Container background="bg-gradient-to-r from-slate-900 to-purple-900" classes="py-20">
+    <CtaButton/>
+   </Container>
+
+   <Container background="bg-indigo-900 bg-opacity-25" classes="py-20">
+    <h2 class="text-4xl text-blue-900 ">Pay for what matters</h2>
+    <p class="mt-8">
+      We've perfected a system that means you only have to pay for the real work: the design and build.
+    </p>
+    <p class="mt-8">
+      By using modern web infrastructure and tools, our websites are virtually <strong class="font-medium">maintenance-free <em>and</em> secure</strong>.
+    </p>
+    <p class="mt-8">
+      <strong class="font-medium">We hand-code each website carefully</strong>. The result is a modern, beautiful website that's so small and light that it <strong class="font-medium">costs nothing to run</strong>. The only thing you pay for is the domain name.
+    </p>
+    <p class="mt-8">
+      Works for everyone: the websites we make work on everything from a tiny phone screen to a 4K monitor, from a sketchy mobile connection on the train to ultra-fast fibre broadband. <strong class="font-medium">Whoever, wherever and whenever someone visits your site, it'll work for them</strong>. Now and for years to come, with no updates necessary.
+    </p>
+   </Container>
+
 
 </MainLayout>

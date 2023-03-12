@@ -1,0 +1,14 @@
+---
+export interface Props {
+	background?: string;
+	classes?: string;
+  margins?: string;
+}
+const { background = "", margins = "mt-32", classes = "" } = Astro.props;
+---
+
+<div class={background}>
+  <div class={`${margins} container max-w-screen-lg mx-auto px-4 xs:px-10 ${classes}`}>
+		<slot/>
+	</div>
+</div>
